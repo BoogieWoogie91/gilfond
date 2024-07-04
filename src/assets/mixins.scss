@@ -1,0 +1,25 @@
+@mixin font ($weigth, $size, $color, $height) {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;    
+    font-style: normal;
+    font-weight: $weigth;
+    font-size: $size;
+    color: $color;    
+    line-height: $height;
+}
+
+
+@mixin flex($horizontal, $verical, $direction: false) {
+    display: flex;
+
+    @if $direction {
+        flex-direction: column;
+        justify-content: $verical;
+        align-items: $horizontal;
+    }
+
+    @else {
+        justify-content: $horizontal;
+        align-items: $verical;
+    }
+}
